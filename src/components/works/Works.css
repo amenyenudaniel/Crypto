@@ -1,0 +1,58 @@
+.works {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.works__container {
+  padding-top: 2rem;
+}
+
+.works__heading {
+  font-size: 4rem;
+  margin: 3rem 0;
+  text-align: center;
+  color: white;
+}
+.works video {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.works__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.works__overlay:hover {
+  opacity: 1;
+}
+
+.works__overlay__circle {
+  padding: 0.7rem;
+  border-radius: 100%;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.play,
+.pause {
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .works__heading {
+    font-size: 1.6rem;
+  }
+}

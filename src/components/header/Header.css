@@ -1,0 +1,128 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  place-items: center;
+  padding-top: 0;
+}
+
+.overlay__gradient1 {
+  width: 32rem;
+  height: 30rem;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  z-index: -30;
+  background-color: #043993;
+  filter: blur(180px);
+  border-radius: 100%;
+}
+.header__image {
+  width: 100%;
+  height: 100%;
+}
+
+.header__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__content {
+  color: var(--color-white);
+  position: relative;
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.header__content h1 p {
+  font-size: 4rem;
+  -webkit-text-stroke: 1px #0644be;
+  line-height: 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+.header__content h1 span {
+  font-size: 7rem;
+  color: transparent;
+  font-weight: bold;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 0.5px white;
+  background-clip: text;
+  background-image: url(../../assets/header.png);
+  object-fit: cover;
+  animation-name: animate;
+  animation-duration: 25s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+.header__content p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 3500px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+.header__buttons button {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .header__image img {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__content h1 {
+    font-size: 2.2rem;
+  }
+  .header__content h1 p {
+    font-size: 2rem;
+  }
+  .header__content h1 span {
+    font-size: 3.5rem;
+  }
+  .header__image img {
+    scale: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__content h1 {
+    font-size: 1.6rem;
+  }
+  .header__content p {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .header__content h1 span {
+    font-size: 3rem;
+    -webkit-text-stroke: 1px var(--color-orange);
+  }
+  .header__buttons button {
+    margin-right: 0.5rem;
+  }
+}
